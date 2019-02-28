@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/">
+        <file>views/ssokit.qml</file>
+        <file>views/MessageLabel.qml</file>
+        <file>views/HelpDialog.qml</file>
+        <file>views/NotepadView.qml</file>
+        <file>views/BottomButton.qml</file>
+        <file>views/TcpView.qml</file>
+        <file>views/UdpView.qml</file>
+        <file>views/TransferView.qml</file>
+        <file>views/TcpServerView.qml</file>
+        <file>views/UdpServerView.qml</file>
+        <file>views/TopButton.qml</file>
+        <file>views/EditComboBox.qml</file>
+        <file>views/BlueToothView.qml</file>
+        <file>views/LogView.qml</file>
+        <file>views/LogListModel.qml</file>
+        <file>views/SystemLogView.qml</file>
+        <file>views/ServerControlView.qml</file>
+        <file>views/IconUpArrow.qml</file>
+        <file>views/IconDownArrow.qml</file>
+        <file>views/ColorList.qml</file>
+        <file>views/IconSelected.qml</file>
+        <file>views/IconTriangle.qml</file>
+        <file>views/TipLabel.qml</file>
+        <file>views/SendView.qml</file>
+        <file>views/UdpClientView.qml</file>
+        <file>views/TcpClientView.qml</file>
+    </qresource>
+</RCC>
