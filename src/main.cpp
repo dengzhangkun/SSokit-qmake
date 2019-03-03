@@ -5,7 +5,7 @@
 #include <QQmlApplicationEngine>
 #include <QWindow>
 #include <QApplication>
-
+#include <QTranslator>
 
 #include "bluetoothmodel.h"
 #include "logmodel.h"
@@ -22,6 +22,11 @@ int main(int argc, char *argv[]) {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
     QApplication app(argc, argv);
+
+    QTranslator traslator;           //创建翻译器
+    traslator.load("SSokit_zh.qm");    //加载语言包
+    app.installTranslator(&traslator); //安装翻译器
+
     qmlRegisterType<NotepadModel>("src.notepadmodel", 1, 0, "NotepadModel");
     qmlRegisterType<BlueToothModel>("src.bluetoothmodel", 1, 0, "BlueToothModel");
     qmlRegisterType<TcpServerModel>("src.tcpservermodel", 1, 0, "TcpServerModel");

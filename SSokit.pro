@@ -37,6 +37,8 @@ SOURCES += \
         src/ClientModel.cpp \
         src/TcpClientModel.cpp \
         src/UdpClientModel.cpp \
+    src/websocketservermodel.cpp \
+    src/websocketclientmodel.cpp
 
 HEADERS +=src/bluetoothmodel.h \
           src/logmodel.h \
@@ -48,14 +50,18 @@ HEADERS +=src/bluetoothmodel.h \
           src/ClientModel.h \
           src/ServerModel.h \
           src/Logger.h \
-          src/StringListModel.h
+          src/StringListModel.h \
+    src/websocketservermodel.h \
+    src/websocketclientmodel.h
 
 RESOURCES += qml.qrc
 
 
-RC_FILE = sokit.rc
+RC_FILE += sokit.rc
 
-ICON = sokit.ico
+
+TRANSLATIONS += src/SSokit_zh.ts
+#                src/SSokit_zh.qm
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
@@ -65,8 +71,14 @@ QML_DESIGNER_IMPORT_PATH =
 
 
 QT += widgets \
-      bluetooth
+      bluetooth \
+      websockets
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+#DISTFILES += \
+#    src/SSokit_zh.ts
+

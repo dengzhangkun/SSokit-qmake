@@ -26,8 +26,11 @@ ApplicationWindow{
             name:"Udp"
         }
         BottomButton {
-            name:"BlueTooth"
+            name:"WebSocket"
         }
+//        BottomButton {
+//            name:"BlueTooth"
+//        }
 //        BottomButton{
 //            name:"COM"
 //        }
@@ -35,10 +38,10 @@ ApplicationWindow{
 //            id:notepad
 //            name:"Notepad"
 //        }
-        BottomButton{
-            id:peltte
-            name:"Plette"
-        }
+//        BottomButton{
+//            id:peltte
+//            name:"Plette"
+//        }
     }
 
     SwipeView{
@@ -54,7 +57,7 @@ ApplicationWindow{
         UdpView{
 
         }
-
+        WebSocketView{}
 
         BlueToothView{
 

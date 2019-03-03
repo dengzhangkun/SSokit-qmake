@@ -1,26 +1,23 @@
-//
-// Created by 冉高飞 on 2019-02-24.
-//
-
-#ifndef SSOKIT_TCPSERVERMODEL_H
-#define SSOKIT_TCPSERVERMODEL_H
-
+#ifndef WEBSOCKETSERVERMODEL_H
+#define WEBSOCKETSERVERMODEL_H
 
 #include "ServerModel.h"
-#include "StringListModel.h"
+
+#include <QWebSocketServer>
+#include <QWebSocket>
 
 
-class TcpServerModel : public ServerModel {
-Q_OBJECT
+class WebSocketServerModel : public ServerModel
+{
+    Q_OBJECT
+
     typedef struct _Conn
     {
-        QTcpSocket* client;
+        QWebSocket* client;
         QString key;
     } Conn;
 public:
-    TcpServerModel();
-
-    virtual ~TcpServerModel() override;
+    WebSocketServerModel();
 
 protected:
     void sendToDst(void *cookie, const QByteArray &bin) override;
@@ -35,6 +32,7 @@ public slots:
     void newConnection();
 
     void newData();
+
 private slots:
     void error();
 
@@ -44,9 +42,7 @@ private slots:
 
 
 private:
-    QTcpServer m_tcp_server;
-
+    QWebSocketServer m_websocket_server;
 };
 
-
-#endif //SSOKIT_TCPSERVERMODEL_H
+#endif // WEBSOCKETSERVERMODEL_H

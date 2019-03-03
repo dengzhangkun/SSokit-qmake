@@ -26,5 +26,8 @@
         <file>views/SendView.qml</file>
         <file>views/UdpClientView.qml</file>
         <file>views/TcpClientView.qml</file>
+        <file>views/WebSocketView.qml</file>
+        <file>views/WebSocketServerView.qml</file>
+        <file>views/WebSocketClientView.qml</file>
     </qresource>
 </RCC>
