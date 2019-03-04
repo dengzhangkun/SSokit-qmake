@@ -35,6 +35,7 @@ Row{
         title: qsTr("Controls")
         viewType: 2
         onStartConnect: {
+            console.log("start udp client---"+addr+":"+port)
             udpModel.toggleConnect(checked,addr,port)
         }
 

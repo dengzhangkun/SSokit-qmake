@@ -6,6 +6,7 @@
 #include "toolkit.h"
 
 bool UdpClientModel::openClient(QString &addr, quint16 port) {
+    qDebug("begin to connect %s : %d",addr.toStdString().data(),port);
     connect(&m_udp_socket, SIGNAL(readyRead()), this, SLOT(newData()));
     connect(&m_udp_socket, SIGNAL(disconnected()), this, SLOT(closed()));
     connect(&m_udp_socket, SIGNAL(connected()), this, SLOT(asynConn()));

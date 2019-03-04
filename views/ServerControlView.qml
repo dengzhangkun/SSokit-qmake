@@ -121,7 +121,7 @@ Column {
                         tip.setState(!toggleConnect.checked,"端口必须是1024-63365之间的数字")
                         return
                     }
-                    startConnect(checked,addrBox.currentText,portBox.editText)
+                    startConnect(checked,addrBox.editText,portBox.editText)
                     connectState(historyConnect.count>0&&checked)
                 }
             }

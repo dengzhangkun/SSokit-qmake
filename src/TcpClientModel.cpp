@@ -6,6 +6,7 @@
 #include "toolkit.h"
 
 bool TcpClientModel::openClient(QString &addr, quint16 port) {
+    qDebug("begin to connect %s : %d",addr.toStdString().data(),port);
     connect(&m_tcp_socket, SIGNAL(readyRead()), this, SLOT(newData()));
     connect(&m_tcp_socket, SIGNAL(disconnected()), this, SLOT(closed()));
     connect(&m_tcp_socket, SIGNAL(connected()), this, SLOT(asynConn()));
@@ -14,7 +15,7 @@ bool TcpClientModel::openClient(QString &addr, quint16 port) {
             SLOT(stateChanged(QAbstractSocket::SocketState)));
     host = TK::ipstr(QHostAddress(addr), port);
     m_tcp_socket.connectToHost(addr, port);
-    if (m_tcp_socket.waitForConnected(1000))
+    if (m_tcp_socket.waitForConnected(1000*10))
         qDebug("Connected!");
     else
         qDebug("error !");
