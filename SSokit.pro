@@ -57,7 +57,7 @@ HEADERS +=src/bluetoothmodel.h \
 RESOURCES += qml.qrc
 
 
-RC_FILE += sokit.rc
+RC_FILE += Icon.icns
 
 
 TRANSLATIONS += src/SSokit_zh.ts
