@@ -6,22 +6,22 @@
     <message>
         <location filename="../views/ColorList.qml" line="11"/>
         <source>tabbar bg: #37474f</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../views/ColorList.qml" line="20"/>
         <source>tabbar selected: #cfd8dc</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../views/ColorList.qml" line="30"/>
         <source>dialog bg:#ffffff - #cfd8dc</source>
-        <translation type="unfinished"></translation>
+        <translation>对话框 bg:#ffffff - cfd8dc</translation>
     </message>
     <message>
         <location filename="../views/ColorList.qml" line="42"/>
         <source>group box line bg:#bdbdbd</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../views/HelpDialog.qml" line="29"/>
         <source>SSokit Help</source>
-        <translation type="unfinished"></translation>
+        <translation>SSokit 帮助</translation>
     </message>
 </context>
 <context>
@@ -47,7 +47,7 @@
     <message>
         <location filename="../views/LogView.qml" line="61"/>
         <source>Clear</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../views/LogView.qml" line="109"/>
@@ -57,12 +57,12 @@
     <message>
         <location filename="../views/LogView.qml" line="134"/>
         <source>Ip:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../views/LogView.qml" line="160"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -197,7 +197,7 @@
     <message>
         <location filename="../views/ssokit.qml" line="6"/>
         <source>SSokit -- F1 for help</source>
-        <translation type="unfinished"></translation>
+        <translation>SSokit--F1打开帮助</translation>
     </message>
 </context>
 </TS>

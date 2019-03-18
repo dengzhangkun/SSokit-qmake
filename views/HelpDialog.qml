@@ -43,7 +43,6 @@ Dialog {
         ScrollBar.vertical: ScrollBar { id: scrollBar
             policy:ScrollBar.AlwaysOff}
         ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
-//        ScrollBar.vertical.policy: ScrollBar.AlwaysOff
         clip: true
         Text {
             id:help

@@ -14,7 +14,7 @@ bool UdpClientModel::openClient(QString &addr, quint16 port) {
     connect(&m_udp_socket, SIGNAL(stateChanged(QAbstractSocket::SocketState)), this,
             SLOT(stateChanged(QAbstractSocket::SocketState)));
     host = TK::ipstr(QHostAddress(addr), port);
-    m_udp_socket.connectToHost(addr, port);
+    m_udp_socket.connectToHost(QHostAddress(addr),port);
     if (m_udp_socket.waitForConnected(1000))
         qDebug("Connected!");
     else
@@ -35,13 +35,18 @@ void UdpClientModel::sendToDst(const QByteArray &bin) {
 
     qint64 writeLen = 0;
     qint64 ioLen = m_udp_socket.write(src, srcLen);
-
+    m_udp_socket.writeDatagram(bin,m_udp_socket.peerAddress(),m_udp_socket.peerPort());
+    qDebug()<<m_udp_socket.peerAddress()<<"---"<<m_udp_socket.peerPort();
+    qDebug()<<"第一次写入长度:"<<ioLen;
     while (ioLen > 0) {
         writeLen += ioLen;
         ioLen = (writeLen >= srcLen) ? 0 :
                 m_udp_socket.write(src+writeLen, srcLen-writeLen);
+        qDebug()<<"每次写入长度"<<writeLen;
     }
 
+    if (m_udp_socket.errorString() != nullptr)
+        qDebug() << "发送udp发生错误---" << m_udp_socket.error();
     if (writeLen != srcLen) {
         qDebug() << "send data failed!";
         sendErrMsg(SEND_ERR,"Send data error",true);

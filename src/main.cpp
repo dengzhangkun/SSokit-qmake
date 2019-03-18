@@ -6,6 +6,7 @@
 #include <QWindow>
 #include <QApplication>
 #include <QTranslator>
+#include <QLibraryInfo>
 
 #include "bluetoothmodel.h"
 #include "logmodel.h"
@@ -23,9 +24,12 @@ int main(int argc, char *argv[]) {
 
     QApplication app(argc, argv);
 
-    QTranslator traslator;           //创建翻译器
-    traslator.load("SSokit_zh.qm");    //加载语言包
-    app.installTranslator(&traslator); //安装翻译器
+    QString locale = QLocale::system().name();
+    QTranslator translator;           //创建翻译器
+//    translator.load("SSokit_zh.qm");    //加载语言包
+    qDebug()<< QLocale::system().name();
+    translator.load("SSokit"+locale);
+    app.installTranslator(&translator); //安装翻译器
 
     qmlRegisterType<NotepadModel>("src.notepadmodel", 1, 0, "NotepadModel");
     qmlRegisterType<BlueToothModel>("src.bluetoothmodel", 1, 0, "BlueToothModel");

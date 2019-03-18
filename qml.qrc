@@ -15,7 +15,6 @@
         <file>views/BlueToothView.qml</file>
         <file>views/LogView.qml</file>
         <file>views/LogListModel.qml</file>
-        <file>views/SystemLogView.qml</file>
         <file>views/ServerControlView.qml</file>
         <file>views/IconUpArrow.qml</file>
         <file>views/IconDownArrow.qml</file>
@@ -25,9 +24,9 @@
         <file>views/TipLabel.qml</file>
         <file>views/SendView.qml</file>
         <file>views/UdpClientView.qml</file>
-        <file>views/TcpClientView.qml</file>
         <file>views/WebSocketView.qml</file>
         <file>views/WebSocketServerView.qml</file>
         <file>views/WebSocketClientView.qml</file>
+        <file>views/TcpClientView.qml</file>
     </qresource>
 </RCC>

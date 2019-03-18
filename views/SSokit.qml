@@ -90,7 +90,7 @@ ApplicationWindow{
     }
     function switchTab(){
         footerBar.currentIndex++
-        footerBar.currentIndex=footerBar.currentIndex % 4
+        footerBar.currentIndex=footerBar.currentIndex % footerBar.count
     }
 
 }
